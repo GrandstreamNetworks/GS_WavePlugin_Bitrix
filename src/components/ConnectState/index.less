@@ -1,0 +1,48 @@
+.resultPage {
+    padding: 0 16px;
+    width: 400px;
+    height: 90px;
+    background: #F5F7FA;
+    border-radius: 4px;
+
+    .result {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+
+        p {
+            width: 194px;
+            font-size: 16px;
+            color: #222222;
+            letter-spacing: 0;
+            text-align: left;
+            line-height: 22px;
+            font-weight: Bold;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        :global {
+            .ant-btn {
+                width: 80px;
+                height: 32px;
+                background: #3E95ED;
+                border-radius: 4px;
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+
+            .ant-image {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
+
+}

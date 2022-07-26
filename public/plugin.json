@@ -1,0 +1,10 @@
+{
+  "name": "Bitrix24",
+  "version": "1.0.0.13",
+  "description": "Bitrix24 CRM is an all-in-one free management platform which provides users effective team management and sales abilities and provides customer management, customer support, and marketing automation features. Bitrix24 CRM is integrated with the Wave application to stay in touch with customers in the most efficient way.",
+  "icon": "./logo.png",
+  "extend_icon":"./extend_icon.png",
+  "permissions": ["call.listen"],
+  "plugin_type": "background",
+  "minimum_SDK_version": "1.0.x"
+}

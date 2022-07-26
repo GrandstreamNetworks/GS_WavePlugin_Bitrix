@@ -1,0 +1,183 @@
+.errorDiv {
+    position: fixed;
+    top: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .errorMessage {
+        padding: 0 10px;
+        height: 32px;
+        background: #fff;
+        line-height: 32px;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        border-radius: 2px;
+        box-shadow: 0 0 4px #00000050;
+    }
+}
+
+.homePage {
+    width: 100%;
+    height: 528px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+        width: 320px;
+        margin: auto;
+
+        .formContent {
+            padding-bottom: 48px;
+        }
+
+        .remember {
+            color: #6f737b;
+            line-height: 17px;
+            text-align: left;
+
+            :global {
+                .ant-checkbox-inner {
+                    width: 14px;
+                    height: 14px;
+                }
+
+                .ant-checkbox-wrapper {
+                    font-size: 12px;
+                    color: #6f737b;
+                }
+
+                .ant-checkbox-inner:after {
+                    top: 5px;
+                    left: 2px;
+                }
+            }
+        }
+
+        :global {
+            .ant-form-item.ant-form-item-has-error {
+                .ant-input-affix-wrapper {
+                    background: #f5f7fa;
+                    border: 1px solid #ff7875;
+
+                    &:hover {
+                        background: #ffffff;
+                        border-color: #ff7875;
+                        box-shadow: none;
+
+                        .ant-input {
+                            background: #ffffff;
+                        }
+                    }
+
+                    &:focus {
+                        background: #ffffff;
+                        border-color: #ff7875;
+                        box-shadow: none;
+
+                        .ant-input {
+                            background: #ffffff;
+                        }
+                    }
+                }
+
+                .ant-input-affix-wrapper.ant-input-affix-wrapper-focused {
+                    background: #ffffff;
+                    border-color: #ff7875;
+                    box-shadow: none;
+
+                    .ant-input {
+                        background: #ffffff;
+                    }
+                }
+            }
+
+            .ant-form-item.ant-form-item-with-help {
+                margin-bottom: 0;
+            }
+
+            .ant-form-item {
+                margin-bottom: 16px;
+
+                .ant-input-affix-wrapper {
+                    height: 40px;
+                    background: #f5f7fa;
+                    border-color: #ffffff;
+                    border-radius: 4px;
+                    box-shadow: none;
+
+                    &:hover {
+                        background: #ffffff;
+                        border: 1px solid #479aed;
+                        box-shadow: none;
+
+                        .ant-input {
+                            background: #ffffff;
+                        }
+                    }
+
+                    &:focus {
+                        background: #ffffff;
+                        border: 1px solid #479aed;
+                        box-shadow: none;
+
+                        .ant-input {
+                            background: #ffffff;
+                        }
+                    }
+                }
+
+                .ant-input-affix-wrapper.ant-input-affix-wrapper-focused {
+                    background: #ffffff;
+                    border: 1px solid #479aed;
+                    box-shadow: none;
+
+                    .ant-input {
+                        background: #ffffff;
+                    }
+                }
+
+                .ant-image {
+                    font-size: 0;
+                }
+
+                .ant-form-item-explain,
+                .ant-form-item-extra {
+                    height: 16px;
+                    font-size: 12px;
+                    line-height: 16px;
+                    min-height: 0;
+                }
+
+                .ant-input-prefix {
+                    margin-right: 12px;
+                    font-size: 0;
+                }
+
+                .ant-input {
+                    background: #f5f7fa;
+                }
+
+                .ant-btn {
+                    width: 100%;
+                    height: 40px;
+                    background: #3e95ed;
+                    border-color: #3e95ed;
+                    border-radius: 24px;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+
+                .ant-form-item-explain {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

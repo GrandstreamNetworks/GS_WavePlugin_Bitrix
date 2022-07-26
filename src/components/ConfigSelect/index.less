@@ -1,0 +1,49 @@
+.configPage {
+    padding-top: 8px;
+
+    .configTitle {
+        width: 100%;
+        height: 32px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #222222;
+        letter-spacing: 0;
+        line-height: 32px;
+        text-align: left;
+    }
+
+    .configForm {
+        width: 100%;
+    }
+
+    :global {
+        .ant-form-item:not(:last-child) {
+            margin-bottom: 16px;
+            height: 32px;
+            line-height: 32px;
+        }
+
+        .ant-col-xs-7 {
+            display: block;
+            flex: 0 0 29% !important;
+            max-width: 29% !important;
+        }
+
+        .ant-col-xs-17 {
+            display: block;
+            flex: 0 0 71% !important;
+            max-width: 71% !important;
+        }
+
+        .ant-select {
+            text-align: left;
+
+            .ant-select-selector {
+                background: #FFFFFF;
+                border: 1px solid #DDDFE4;
+                border-radius: 4px;
+            }
+        }
+    }
+}
