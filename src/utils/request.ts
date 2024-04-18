@@ -2,9 +2,9 @@
  * request 网络请求工具
  * 更详细的 api 文档: https://github.com/umijs/umi-request
  */
-import { formatMessage, Response } from 'umi'
+import { REQUEST_CODE } from '@/constant';
+import { formatMessage, Response } from 'umi';
 import { extend } from 'umi-request';
-import { REQUEST_CODE } from '@/constant'
 
 /**
  * 异常处理程序

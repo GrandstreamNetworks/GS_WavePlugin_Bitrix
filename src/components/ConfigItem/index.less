@@ -1,0 +1,37 @@
+.configItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    border-bottom: 1px solid #DDDFE4;
+    padding: 0 16px;
+    cursor: pointer;
+
+    &:hover {
+    background-color: #EAECEF;
+}
+
+    .itemName {
+        font-size: 14px;
+        color: #222222;
+        letter-spacing: 0;
+    }
+
+    .itemState {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+
+        .state {
+            color: #70737A;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            font-size: 0;
+        }
+    }
+}

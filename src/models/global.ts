@@ -6,11 +6,6 @@ export interface GlobalModelState {
     userConfig: LooseObject
     user: LooseObject
     connectState: string
-    host: string,
-    uploadCall: boolean,
-    showConfig: ShowConfig,
-    webhook: string,
-    callState: Map<string, boolean>
 }
 
 export interface GlobalModelType {
@@ -18,8 +13,7 @@ export interface GlobalModelType {
     state: GlobalModelState
     effects: {
         getUser: Effect
-        uploadCallChange: Effect
-        saveShowConfig: Effect
+        userConfigChange: Effect
         saveUserConfig: Effect
         logout: Effect
     }
@@ -34,15 +28,10 @@ const GlobalModal: GlobalModelType = {
         user: {},
         userConfig: {},
         connectState: 'SUCCESS',
-        host: '',
-        uploadCall: true,
-        showConfig: {},
-        webhook: '',
-        callState: new Map(),
     },
 
     effects: {
-        * getUser({ payload }, { call, put }) {
+        * getUser({ payload }, { call, put }): any {
             const res = yield call(getUser, payload);
             const user = get(res, 'result') || res;
             const connectState = res?.code || 'SUCCESS';
@@ -76,34 +65,15 @@ const GlobalModal: GlobalModelType = {
             history.replace({ pathname: 'login' })
         },
 
-        * uploadCallChange({ payload }, { put, select }) {
+        * userConfigChange({ payload }, { put, select }) {
             const { userConfig } = yield select((state: any) => state.global);
-            userConfig.uploadCall = payload;
+            const newConfig = {
+                ...userConfig,
+                ...payload,
+            }
             yield put({
                 type: 'saveUserConfig',
-                payload: userConfig,
-            })
-            yield put({
-                type: 'save',
-                payload: {
-                    uploadCall: payload,
-                }
-            })
-        },
-
-        * saveShowConfig({ payload }, { put, select }) {
-            const { userConfig } = yield select((state: any) => state.global);
-            console.log(userConfig);
-            userConfig.showConfig = payload;
-            yield put({
-                type: 'saveUserConfig',
-                payload: userConfig,
-            })
-            yield put({
-                type: 'save',
-                payload: {
-                    showConfig: payload,
-                }
+                payload: newConfig,
             })
         },
 

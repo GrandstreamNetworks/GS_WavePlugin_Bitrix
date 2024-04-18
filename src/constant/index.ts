@@ -54,6 +54,7 @@ const EVENT_KEY = {
     initP2PCall: 'onInitP2PCall', // wave发去呼叫
     p2PCallCanceled: 'onP2PCallCanceled', // 未接来电、去电
     initPluginWindowOk: 'onInitPluginWindowOk', //初始化窗口成功
+    onViewCustomerInfos: 'onViewCustomerInfos' // 收到客户信息
 };
 
 const WAVE_CALL_TYPE = {
@@ -62,11 +63,18 @@ const WAVE_CALL_TYPE = {
     miss: 0,
 };
 
+const CALL_DIRECTION_TYPE: any = {
+    1: 'Inbound',
+    2: 'Outbound',
+    0: 'Missed',
+}
+
 const DATE_FORMAT = {
     format_1: 'YYYY/MM/DD',
     format_2: 'YYYY/MM/DD HH/mm/ss',
     format_3: 'YYYY-MM-DD HH-mm-ss',
     format_4: 'YYYY-MM-DD HH:mm:ss Z',
+    format_5: 'HH:mm:ss',
 };
 
 const MODULES = {
@@ -99,22 +107,44 @@ const CONFIG_SHOW: CONFIG_SHOW = {
 }
 
 const NotificationConfig = {
-    first: 'information 1',
-    second: 'information 2',
-    third: 'information 3',
-    forth: 'information 4',
-    fifth: 'information 5'
+    first: 'Information 1',
+    second: 'Information 2',
+    third: 'Information 3',
+    forth: 'Information 4',
+    fifth: 'Information 5'
 }
 
+const NOTIFICATION_CONFIG_DEF = {
+    first: 'Name',
+    second: 'Phone',
+    third: 'None',
+    forth: 'None',
+    fifth: 'None',
+}
+
+const AUTO_CREATE_CONFIG_DEF = {
+    numberType: 'Wave',
+    direction: 'All',
+    entityType: 'Contact',
+    firstName: 'Wave [Number]',
+    lastName: 'New',
+}
+
+const UPLOAD_CALL_CONFIG_DEF = {
+    subject: 'Wave PhoneSystem Call',
+    Inbound: '[DateTime]: Incoming call from [Number] [Name] to [Agent]([Duration])',
+    Missed: '[DateTime]: Missed call from [Number] [Name] to [Agent]',
+    Outbound: '[DateTime]: Outgoing call from [Agent] to [Number] [Name] ([Duration])',
+    unansweredOutbound: '[DateTime]: Unanswered outgoing call from [Agent] to [Number] [Name]'
+}
+
+const CREATION_CONFIG_CONTACT_TYPE = [
+    'Contact', 'Lead'
+]
+
 export {
-    CONFIG_SHOW,
-    NotificationConfig,
-    GLOBAL_MESSAGE,
-    REQUEST_CODE,
-    SESSION_STORAGE_KEY,
-    EVENT_KEY,
-    WAVE_CALL_TYPE,
-    DATE_FORMAT,
-    MODULES,
-    MODULE_IDS
+    AUTO_CREATE_CONFIG_DEF, CALL_DIRECTION_TYPE, CONFIG_SHOW, CREATION_CONFIG_CONTACT_TYPE, DATE_FORMAT, EVENT_KEY, GLOBAL_MESSAGE, MODULES,
+    MODULE_IDS, NOTIFICATION_CONFIG_DEF, NotificationConfig, REQUEST_CODE,
+    SESSION_STORAGE_KEY, UPLOAD_CALL_CONFIG_DEF, WAVE_CALL_TYPE
 };
+

@@ -1,17 +1,23 @@
 import CallAction from './CallAction';
-import ConfigSelect from './ConfigSelect';
 import ConfigBlock from './ConfigBlock';
+import ConfigFooter from './ConfigFooter';
 import ConnectError from './ConnectError';
 import ConnectState from './ConnectState';
-import SwitchBtn from './SwitchBtn';
 import Footer from './Footer';
+import Navigation from './Navigation';
+import NotificationConfig from './NotificationConfig';
+import SwitchConfig from './SwitchConfig';
+import SyncConfig from './SyncConfig';
 
 export {
     CallAction,
     ConfigBlock,
-    ConfigSelect,
     ConnectError,
     ConnectState,
-    SwitchBtn,
-    Footer
+    Footer,
+    SyncConfig,
+    Navigation,
+    NotificationConfig,
+    ConfigFooter,
+    SwitchConfig,
 }

@@ -1,0 +1,51 @@
+
+.switchConfig {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #DDDFE4;;
+
+
+    .spanLabel {
+        font-size: 14px;
+        color: #222222;
+        letter-spacing: 0;
+        line-height: 16px;
+        font-weight: 400;
+        text-align: left;
+        cursor: default;
+    }
+
+    .switch {
+        width: 128px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+
+        :global {
+            .ant-switch {
+                min-width: 32px;
+                height: 18px;
+            }
+
+            .ant-switch-checked {
+                background-color: #3e95ed;
+
+                .ant-switch-handle {
+                    left: calc(100% - 16px);
+                }
+            }
+
+            .ant-switch-handle {
+                top: 2px;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}
+
+
